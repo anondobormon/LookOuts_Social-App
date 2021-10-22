@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile</title>
+
+    <!-- Style Sheet -->
+    <link rel="stylesheet" href="./styleSheets/style.css" />
+
+    <!-- Font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <!-- Montserrat font family -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins&display=swap");
+    </style>
+  </head>
+  <body style="background-color: rgb(236, 236, 236)">
+    <header>
+      <div class="container-fluid mt-3">
+        <div class="row justify-content-center">
+          <div class="col-lg-9 pb-4">
+            <!-- Profile cover section  -->
+            <div class="profile-cover">
+              <div class="cover-pto">
+                <img src="/img/pbg.jpg" alt="" />
+              </div>
+              <!-- <div class="cover-details"> -->
+              <div class="row cover-details align-items-center">
+                <div class="time-line col-lg-5">
+                  <ul>
+                    <li>
+                      <button onclick="togglePage('timeline-section')">
+                        Timeline
+                      </button>
+                    </li>
+                    <li>
+                      <button onclick='togglePage("about-section")' id="about">
+                        About
+                      </button>
+                    </li>
+                    <li><button onclick='togglePage("friends-section")'">Friends</button></li>
+                  </ul>
+                </div>
+                <div class="profile-pto col-lg-2">
+                  <div>
+                    <div class="p-pto">
+                      <img src="/img/avatar.jpg" alt="" />
+                    </div>
+                    <h2>James Bond</h2>
+                    <p><small>San Francisco, CA</small></p>
+                  </div>
+                </div>
+                <div class="time-line col-lg-5">
+                  <ul>
+                    <li><a href="">Photos</a></li>
+                    <li><a href="">Videos</a></li>
+                    <li><a href="">Dot's</a></li>
+                  </ul>
+                </div>
+              </div>
+              <!-- </div> -->
+            </div>
+
+            <!-- Timeline section -->
+            <div id="timeline-section" class="hidden-dis dis-none">
+              <div class="row mt-3">
+                <div class="col-lg-3">
+                  <div class="profile-intro pb-4">
+                    <div class="intro px-4 pt-4">Profile Intro</div>
+                    <hr />
+                    <div class="details-intro px-4 pb-4">
+                      <div class="intro-info pb-3">
+                        <h6>About Me</h6>
+                        <p>
+                          <small
+                            >Lorem ipsum dolor, sit amet consectetur adipisicing
+                            elit. Perspiciatis commodi sapiente
+                            excepturi!</small
+                          >
+                        </p>
+                      </div>
+                      <div class="intro-info pb-3">
+                        <h6>About Me</h6>
+                        <p>
+                          <small
+                            >Lorem ipsum dolor, sit amet consectetur adipisicing
+                            elit. Perspiciatis commodi sapiente
+                            excepturi!</small
+                          >
+                        </p>
+                      </div>
+                    </div>
+                    <!-- Other social networks -->
+                    <div class="other-social-network px-4">
+                      <h5>Other Social Networks</h5>
+                      <button class="social-btn">
+                        <span><i class="fab fa-facebook-f"></i></span>Facebook
+                      </button>
+                      <button class="social-btn">
+                        <span><i class="fab fa-twitter"></i></span>Twitter
+                      </button>
+                      <button class="social-btn">
+                        <span><i class="fab fa-linkedin-in"></i></span>Linkedin
+                      </button>
+                      <button class="social-btn">
+                        <span><i class="fab fa-dribbble"></i></span>Dribbble
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="timeline-status p-4">
+                    <div>
+                      <div class="creator-img">
+                        <img src="/img/avatar.jpg" alt="" />
+                      </div>
+                      <div class="creator-name">
+                        <p>James Hollen</p>
+                        <p><small>19 hours ago</small></p>
+                      </div>
+                    </div>
+                    <p
+                      style="
+                        overflow: hidden;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 2;
+                        -webkit-box-orient: vertical;
+                      "
+                    >
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      Blanditiis eius maiores ipsam cupiditate molestias quod id
+                      explicabo! Nemo recusandae officia vel odio animi velit
+                      voluptate cupiditate id sit quae ab laudantium, optio quia
+                      in ducimus adipisci, nihil itaque magnam. Dicta fuga quas
+                      corporis. Explicabo eveniet sunt odio quam ipsa ut.
+                    </p>
+                    <div class="timeline-status-img">
+                      <img src="/img/status.jpg" alt="" />
+                    </div>
+                    <div class="status-reaction">
+                      <ul>
+                        <li><i class="far fa-thumbs-up"></i></li>
+                        <li><i class="fas fa-heart"></i></li>
+                        <li><i class="far fa-heart"></i></li>
+                        <li>3.0k Like</li>
+                        <li id="comment-btn">
+                          <button><i class="far fa-comment"></i></button>
+                        </li>
+                        <li>15 Comment</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!-- Timeline photos -->
+                <div class="col-md-3">
+                  <div class="timeline-photos">
+                    <h6 class="px-4 pt-4">Last Photos</h6>
+                    <hr />
+                    <div class="row px-4 pb-4">
+                      <div class="last-img col-4 mb-3">
+                        <img src="/img/avatar.jpg" alt="" />
+                      </div>
+                      <div class="last-img col-4 mb-3">
+                        <img src="/img/avatar.jpg" alt="" />
+                      </div>
+                      <div class="last-img col-4 mb-3">
+                        <img src="/img/avatar.jpg" alt="" />
+                      </div>
+                      <div class="last-img col-4 mb-3">
+                        <img src="/img/avatar.jpg" alt="" />
+                      </div>
+                      <div class="last-img col-4 mb-3">
+                        <img src="/img/avatar.jpg" alt="" />
+                      </div>
+                      <div class="last-img col-4 mb-3">
+                        <img src="/img/avatar.jpg" alt="" />
+                      </div>
+                      <div class="last-img col-4 mb-3">
+                        <img src="/img/avatar.jpg" alt="" />
+                      </div>
+                      <div class="last-img col-4 mb-3">
+                        <img src="/img/avatar.jpg" alt="" />
+                      </div>
+                      <div class="last-img col-4 mb-3">
+                        <img src="/img/avatar.jpg" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- about section  -->
+            <div class="hidden-dis dis-none" id="about-section">
+              <div class="row mt-3 gx-4">
+                <div class="col-lg-4">
+                  <div class="personal-info">
+                    <div class="info d-flex align-items-center pt-4 px-4">
+                      <h3>Personal Info</h3>
+                      
+                    </div>
+                    <hr />
+                    <div class="information pb-4 px-4">
+                      <div class="about">
+                        <p>About Me:</p>
+                        <p>Information of the about</p>
+                      </div>
+                      <div class="about">
+                        <p>About Me:</p>
+                        <p>Information of the about</p>
+                      </div>
+                      <div class="about">
+                        <p>Birth Place:</p>
+                        <p>Information of the about</p>
+                      </div>
+                      <div class="about">
+                        <p>Lives In:</p>
+                        <p>Information of the about</p>
+                      </div>
+
+                      <div class="about">
+                        <p>Occupation:</p>
+                        <p>Information of the about</p>
+                      </div>
+
+                      <div class="about">
+                        <p>Joined:</p>
+                        <p>Information of the about</p>
+                      </div>
+                      <div class="about">
+                        <p>Gender:</p>
+                        <p>Information of the about</p>
+                      </div>
+
+                      <div class="about">
+                        <p>Status:</p>
+                        <p>Information of the about</p>
+                      </div>
+                      <div class="about">
+                        <p>Email:</p>
+                        <p>Information of the about</p>
+                      </div>
+                      <div class="about">
+                        <p>Phone:</p>
+                        <p>Information of the about</p>
+                      </div>
+
+                      <div class="about">
+                        <p>Religion:</p>
+                        <p>
+                          Lorem ipsum dolor sit, amet consectetur adipisicing
+                          elit. Quisquam, rem error modi optio, explicabo earum
+                          mollitia aliquam fuga, obcaecati nostrum laudantium
+                          sapiente id. Qui ducimus corrupti commodi pariatur
+                          molestiae ipsum? Dignissimos ex vel quo fugiat,
+                          consequuntur praesentium veritatis veniam obcaecati
+                          delectus? Laudantium, labore ad deleniti ullam
+                          perspiciatis quidem aspernatur exercitationem.
+                        </p>
+                      </div>
+                      <div class="about">
+                        <p>Political Incline:</p>
+                        <p>Information of the about</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-8">
+                  <div class="favorites">
+                    <div class="favorites-header px-4 pt-4 d-flex">
+                      <h3>Hobbies and Interests</h3>
+                      <a href="/profile-update" class="btn btn-info">Edit</a>
+                    </div>
+                    <hr />
+                    <!-- Favorite information -->
+                    <div class="favorite-info">
+                      <div class="row px-4 pb-4">
+                        <div class="col-lg-6 col-md-6">
+                          <div class="fav-info">
+                            <p>Hobbies</p>
+                            <p>
+                              Lorem ipsum, dolor sit amet consectetur
+                              adipisicing elit. Asperiores illo maxime
+                              reiciendis aspernatur aut quisquam, quasi
+                              reprehenderit quia quidem doloremque vitae, natus
+                              at ratione nobis necessitatibus pariatur, eum
+                              repudiandae minima cupiditate alias. Voluptas, at
+                              autem. Velit unde, rem laborum corrupti itaque sed
+                              voluptatem! Assumenda hic neque veniam maiores
+                              accusamus expedita.
+                            </p>
+                          </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                          <div class="fav-info">
+                            <p>Hobbies</p>
+                            <p>
+                              Lorem ipsum, dolor sit amet consectetur
+                              adipisicing elit. Asperiores illo maxime
+                              reiciendis aspernatur aut quisquam, quasi
+                              reprehenderit quia quidem doloremque vitae, natus
+                              at ratione nobis necessitatibus pariatur, eum
+                              repudiandae minima cupiditate alias. Voluptas, at
+                              autem. Velit unde, rem laborum corrupti itaque sed
+                              voluptatem! Assumenda hic neque veniam maiores
+                              accusamus expedita.
+                            </p>
+                          </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                          <div class="fav-info">
+                            <p>Hobbies</p>
+                            <p>
+                              Lorem ipsum, dolor sit amet consectetur
+                              adipisicing elit. Asperiores illo maxime
+                              reiciendis aspernatur aut quisquam, quasi
+                              reprehenderit quia quidem doloremque vitae, natus
+                              at ratione nobis necessitatibus pariatur, eum
+                              repudiandae minima cupiditate alias. Voluptas, at
+                              autem. Velit unde, rem laborum corrupti itaque sed
+                              voluptatem! Assumenda hic neque veniam maiores
+                              accusamus expedita.
+                            </p>
+                          </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                          <div class="fav-info">
+                            <p>Hobbies</p>
+                            <p>
+                              Lorem ipsum, dolor sit amet consectetur
+                              adipisicing elit. Asperiores illo maxime
+                              reiciendis aspernatur aut quisquam, quasi
+                              reprehenderit quia quidem doloremque vitae, natus
+                              at ratione nobis necessitatibus pariatur, eum
+                              repudiandae minima cupiditate alias. Voluptas, at
+                              autem. Velit unde, rem laborum corrupti itaque sed
+                              voluptatem! Assumenda hic neque veniam maiores
+                              accusamus expedita.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Education section -->
+                  <div class="education mt-4">
+                    <div class="favorites-header px-4 pt-4 d-flex">
+                      <h3>Education and Employment</h3>
+                      <p>Dot's</p>
+                    </div>
+                    <hr />
+                    <!-- Favorite information -->
+                    <div class="education-info">
+                      <div class="row px-4 pb-4">
+                        <div class="col-lg-6 col-md-6">
+                          <div class="fav-info">
+                            <p>Hobbies</p>
+                            <p>
+                              Lorem ipsum, dolor sit amet consectetur
+                              adipisicing elit. Asperiores illo maxime
+                              reiciendis aspernatur aut quisquam, quasi
+                              reprehenderit quia quidem doloremque vitae, natus
+                              at ratione nobis necessitatibus pariatur, eum
+                              repudiandae minima cupiditate alias. Voluptas, at
+                              autem. Velit unde, rem laborum corrupti itaque sed
+                              voluptatem! Assumenda hic neque veniam maiores
+                              accusamus expedita.
+                            </p>
+                          </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                          <div class="fav-info">
+                            <p>Hobbies</p>
+                            <p>
+                              Lorem ipsum, dolor sit amet consectetur
+                              adipisicing elit. Asperiores illo maxime
+                              reiciendis aspernatur aut quisquam, quasi
+                              reprehenderit quia quidem doloremque vitae, natus
+                              at ratione nobis necessitatibus pariatur, eum
+                              repudiandae minima cupiditate alias. Voluptas, at
+                              autem. Velit unde, rem laborum corrupti itaque sed
+                              voluptatem! Assumenda hic neque veniam maiores
+                              accusamus expedita.
+                            </p>
+                          </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                          <div class="fav-info">
+                            <p>Hobbies</p>
+                            <p>
+                              Lorem ipsum, dolor sit amet consectetur
+                              adipisicing elit. Asperiores illo maxime
+                              reiciendis aspernatur aut quisquam, quasi
+                              reprehenderit quia quidem doloremque vitae, natus
+                              at ratione nobis necessitatibus pariatur, eum
+                              repudiandae minima cupiditate alias. Voluptas, at
+                              autem. Velit unde, rem laborum corrupti itaque sed
+                              voluptatem! Assumenda hic neque veniam maiores
+                              accusamus expedita.
+                            </p>
+                          </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                          <div class="fav-info">
+                            <p>Hobbies</p>
+                            <p>
+                              Lorem ipsum, dolor sit amet consectetur
+                              adipisicing elit. Asperiores illo maxime
+                              reiciendis aspernatur aut quisquam, quasi
+                              reprehenderit quia quidem doloremque vitae, natus
+                              at ratione nobis necessitatibus pariatur, eum
+                              repudiandae minima cupiditate alias. Voluptas, at
+                              autem. Velit unde, rem laborum corrupti itaque sed
+                              voluptatem! Assumenda hic neque veniam maiores
+                              accusamus expedita.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Friends Section -->
+            <div id="friends-section" class="hidden-dis dis-none">
+              <div class="row mt-3 gx-4">
+                <!-- Friends Section details -->
+                <div class="col-md-3">
+                  <div class="friend-profile">
+                    <div class="friend-cover">
+                      <img src="/img/status.jpg" alt="" />
+                    </div>
+                    <div class="friend-details pt-3">
+                      <div class="friends-profile-pto mb-3">
+                        <img src="/img/avatar.jpg" alt="" />
+                      </div>
+                      <h5>Friends Name</h5>
+                      <p><small>Friends Address</small></p>
+                      <div class="friend-info">
+                        <div class="row px-5">
+                          <div class="col-4">
+                            <p>50</p>
+                            <p><small>Friends</small></p>
+                          </div>
+                          <div class="col-4">
+                            <p>50</p>
+                            <p><small>Photos</small></p>
+                          </div>
+                          <div class="col-4">
+                            <p>50</p>
+                            <p><small>Videos</small></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="col-md-3">
+                  <div class="friend-profile">
+                    <div class="friend-cover">
+                      <img src="/img/status.jpg" alt="" />
+                    </div>
+                    <div class="friend-details pt-3">
+                      <div class="friends-profile-pto mb-3">
+                        <img src="/img/avatar.jpg" alt="" />
+                      </div>
+                      <h5>Friends Name</h5>
+                      <p><small>Friends Address</small></p>
+                      <div class="friend-info">
+                        <div class="row px-5">
+                          <div class="col-4">
+                            <p>50</p>
+                            <p><small>Friends</small></p>
+                          </div>
+                          <div class="col-4">
+                            <p>50</p>
+                            <p><small>Photos</small></p>
+                          </div>
+                          <div class="col-4">
+                            <p>50</p>
+                            <p><small>Videos</small></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="col-md-3">
+                  <div class="friend-profile">
+                    <div class="friend-cover">
+                      <img src="/img/status.jpg" alt="" />
+                    </div>
+                    <div class="friend-details pt-3">
+                      <div class="friends-profile-pto mb-3">
+                        <img src="/img/avatar.jpg" alt="" />
+                      </div>
+                      <h5>Friends Name</h5>
+                      <p><small>Friends Address</small></p>
+                      <div class="friend-info">
+                        <div class="row px-5">
+                          <div class="col-4">
+                            <p>50</p>
+                            <p><small>Friends</small></p>
+                          </div>
+                          <div class="col-4">
+                            <p>50</p>
+                            <p><small>Photos</small></p>
+                          </div>
+                          <div class="col-4">
+                            <p>50</p>
+                            <p><small>Videos</small></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="col-md-3">
+                  <div class="friend-profile">
+                    <div class="friend-cover">
+                      <img src="/img/status.jpg" alt="" />
+                    </div>
+                    <div class="friend-details pt-3">
+                      <div class="friends-profile-pto mb-3">
+                        <img src="/img/avatar.jpg" alt="" />
+                      </div>
+                      <h5>Friends Name</h5>
+                      <p><small>Friends Address</small></p>
+                      <div class="friend-info">
+                        <div class="row px-5">
+                          <div class="col-4">
+                            <p>50</p>
+                            <p><small>Friends</small></p>
+                          </div>
+                          <div class="col-4">
+                            <p>50</p>
+                            <p><small>Photos</small></p>
+                          </div>
+                          <div class="col-4">
+                            <p>50</p>
+                            <p><small>Videos</small></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Bootstrap -->
+    <script>
+      const togglePage = (id) => {
+        const element = document.querySelectorAll(".dis-none");
+        element.forEach((data) => {
+          data.style.display = "none";
+        });
+        document.getElementById(id).style.display = "block";
+      };
+      togglePage("timeline-section");
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+
+    <!-- Style Sheet -->
+    <link rel="stylesheet" href="./styleSheets/style.css" />
+
+    <!-- Font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <!-- Montserrat font family -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins&display=swap");
+    </style>
+  </head>
+
+  <body style="background-color: rgb(236, 236, 236)">
+    <header>
+      <div class="container-fluid">
+        <div class="row py-5">
+          <div class="col-lg-3 p-0">
+            <!-- Sidebar content -->
+            <div class="side-menu my-2">
+              <h6>Sidebar</h6>
+              <ul>
+                <li>
+                  <a href="">
+                    <span><i class="fas fa-home"></i></span>Home</a
+                  >
+                </li>
+                <li>
+                  <a href="">
+                    <span><i class="fas fa-rss-square"></i></span>Newsfeed</a
+                  >
+                </li>
+                <li>
+                  <a href="">
+                    <span><i class="fas fa-bell"></i></span>Notification</a
+                  >
+                </li>
+                <li>
+                  <a href="">
+                    <span><i class="fas fa-user-tag"></i></span>Profile</a
+                  >
+                </li>
+                <li>
+                  <a href="">
+                    <span><i class="fas fa-box"></i></span>Explore Stories</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <!-- More pages... -->
+            <div class="side-more my-2">
+              <h6>More Page</h6>
+              <ul>
+                <li>
+                  <a href="">
+                    <span><i class="fas fa-inbox"></i></span>Email</a
+                  >
+                </li>
+                <li>
+                  <a href="">
+                    <span><i class="fas fa-home"></i></span>Near Hotel</a
+                  >
+                </li>
+                <li>
+                  <a href="">
+                    <span><i class="fas fa-bell"></i></span>Latest Event</a
+                  >
+                </li>
+                <li>
+                  <a href="">
+                    <span><i class="fas fa-box"></i></span>Live Stream</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <!-- Account -->
+            <div class="side-more my-2">
+              <h6>Account</h6>
+              <ul>
+                <li>
+                  <a href="">
+                    <span><i class="fas fa-inbox"></i></span>Setting</a
+                  >
+                </li>
+                <li>
+                  <a href="">
+                    <span><i class="fas fa-home"></i></span>Analytics</a
+                  >
+                </li>
+                <li>
+                  <a href="">
+                    <span><i class="fas fa-bell"></i></span>Chat</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Create status & show status  -->
+          <div class="col-lg-7">
+            <div class="row">
+              <div class="col-lg-8">
+                <div class="create-status">
+                  <div class="create-post">
+                    <li class="py-3">
+                      <span id="create-icon"><i class="far fa-edit"></i></span
+                      >Create Post
+                    </li>
+                    <div class="status-input">
+                      <div class="creator-img">
+                        <img src="/img/avatar.jpg" alt="" />
+                      </div>
+                      <form
+                        style="width: 95%"
+                        action="/home"
+                        enctype="multipart/form-data"
+                        method="post"
+                      >
+                        <textarea
+                          style="
+                            width: 98%;
+                            padding: 10px;
+                            border-radius: 8px;
+                            outline: none;
+                            border: none;
+                            border: 2px solid gray;
+                          "
+                          name="status"
+                          id="status-textarea"
+                          rows="4"
+                          oninput="change()"
+                          placeholder="What's on your mind?"
+                        ></textarea>
+                        <input
+                          style="display: none"
+                          type="file"
+                          name="image"
+                          id="image"
+                          class="form-control"
+                        />
+                        <input id="post-btn" type="submit" value="Post" />
+                      </form>
+                    </div>
+
+                    <ul class="live-streaming">
+                      <a href="">
+                        <li>
+                          <span><i class="fas fa-video"></i></span>Live Video
+                        </li>
+                      </a>
+
+                      <li style="cursor: pointer" onclick="togglePhotos()">
+                        <span><i class="far fa-image"></i></span>Photos
+                      </li>
+
+                      <li>
+                        <span><i class="fas fa-camera"></i></span
+                        >Feeling/Activity
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- Posted statuses are -->
+                <% status.forEach((post)=>{%>
+                <div class="status">
+                  <div class="status-user">
+                    <div>
+                      <div class="status-user-image">
+                        <img
+                          src="/uploads/avatars/<%= post.userId.avatar %>"
+                          alt=""
+                        />
+                      </div>
+                      <p>
+                        <%= post.userId.username %> <br /><span
+                          >10 min ago</span
+                        >
+                      </p>
+                    </div>
+                    <button id="dots"><i class="fas fa-ellipsis-h"></i></button>
+                  </div>
+                  <div class="status-details">
+                    <p id="wrap-status" class="textWraper">
+                      <%= post.status_text %>
+                    </p>
+                    <button onclick="seeMoreToggle()" class="see-more-btn">
+                      See more
+                    </button>
+                    <div class="status-image">
+                      <img
+                        src="/uploads/statusImage/<%= post.image %>"
+                        alt=""
+                      />
+                    </div>
+
+                    <div class="status-reaction">
+                      <ul>
+                        <li><i class="far fa-thumbs-up"></i></li>
+                        <li><i class="fas fa-heart"></i></li>
+                        <li><i class="far fa-heart"></i></li>
+                        <li>3.0k Like</li>
+                        <li id="comment-btn">
+                          <button><i class="far fa-comment"></i></button>
+                        </li>
+                        <li>15 Comment</li>
+                      </ul>
+                    </div>
+                    <!-- Comment page -->
+                    <div id="comment">This is comment</div>
+                  </div>
+                </div>
+                <%}) %>
+              </div>
+              <!-- Friends list -->
+              <div class="col-lg-4 col-md-6 col-sm-8">
+                <div class="friends-list py-4">
+                  <h3 class="px-3">Friend's</h3>
+                  <% users.forEach((user)=>{%>
+                  <hr />
+                  <div class="px-3 list">
+                    <div class="friends-photo">
+                      <img src="/uploads/avatars/<%= user.avatar%>" alt="" />
+                    </div>
+                    <div class="add-btn">
+                      <p><strong>Alexzander Fleming</strong></p>
+                      <button class="btn btn-info">Add Friend</button>
+                    </div>
+                  </div>
+                  <%})%>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- active status area  -->
+          <div class="col-lg-2">
+            <div class="active">
+              <div>
+                <div class="active-image">
+                  <img src="/img/avatar.jpg" alt="" />
+                </div>
+                <p>Josh Butler</p>
+              </div>
+              <div class="active-sign"></div>
+            </div>
+            <div class="active">
+              <div>
+                <div class="active-image">
+                  <img src="/img/avatar.jpg" alt="" />
+                </div>
+                <p>Josh Butler</p>
+              </div>
+              <div class="active-sign"></div>
+            </div>
+            <div class="active">
+              <div>
+                <div class="active-image">
+                  <img src="/img/avatar.jpg" alt="" />
+                </div>
+                <p>Josh Butler</p>
+              </div>
+              <div class="active-sign"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- external chat box -->
+    <section></section>
+
+    <script>
+      // const are = document.getElementById("status-textarea");
+      // are.addEventListener("change", function (e) {
+      //   console.log(e.target.value);
+      // });
+      const comment = document.querySelector("#comment");
+      let change = () => {
+        const are = document.getElementById("status-textarea").value;
+        const post_btn = document.getElementById("post-btn");
+        if (are.length > 0) {
+          post_btn.style.display = "block";
+        } else {
+          post_btn.style.display = "none";
+        }
+      };
+      const togglePhotos = () => {
+        const image = document.getElementById("image");
+        if (image.style.display == "block") {
+          image.style.display = "none";
+        } else {
+          image.style.display = "block";
+        }
+      };
+
+      document
+        .getElementById("comment-btn")
+        .addEventListener("click", function () {
+          if (comment.style.display == "block") {
+            comment.style.display = "none";
+          } else {
+            comment.style.display = "block";
+          }
+        });
+      //see more button toggle
+      const seeMoreToggle = (e) => {
+        const status = document.querySelectorAll(".textWraper");
+        console.log(status.event);
+        if (status.id == "wrap-status") {
+          status.id = "";
+        } else {
+          status.id = "wrap-status";
+        }
+      };
+    </script>
+
+    <!-- Bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

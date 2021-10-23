@@ -18,18 +18,16 @@ const checkLogin = require("../middleware/checkLogin");
 
 const router = express.Router();
 
-router.get("/", function (req, res) {
-  res.render("sign-up");
-});
+router.get("/", checkLogin, getStatus);
 
 // User sign up controller
 router.post("/", avatarUpload, userValidator, manageAvatar, addUser);
 
 //Render Home page and create post router
-router.get("/home", checkLogin, getStatus);
+// router.get("/home", checkLogin, getStatus);
 
 // Post a status message
-router.post("/home", checkLogin, statusImageUpload, statusController);
+router.post("/", checkLogin, statusImageUpload, statusController);
 
 // Get profile information
 router.get("/profile", checkLogin, getProfile);

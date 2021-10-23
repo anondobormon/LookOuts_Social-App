@@ -70,10 +70,12 @@ const peopleSchema = mongoose.Schema(
     writers: {
       type: String,
     },
-    status: {
-      type: mongoose.Types.ObjectId,
-      ref: "Status",
-    },
+    post: [
+      {
+        type: mongoose.Types.ObjectId,
+        ref: "Status",
+      },
+    ],
     date: {
       type: Date,
       default: Date.now,

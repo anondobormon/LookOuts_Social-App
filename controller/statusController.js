@@ -17,7 +17,7 @@ async function uploadStatus(req, res, next) {
     { _id: req.userId },
     {
       $push: {
-        status: data._id,
+        post: data._id,
       },
     }
   );

@@ -32,7 +32,7 @@ async function loginController(req, res, next) {
           email: user[0].userEmail,
         };
         // console.log(res.locals);
-        res.redirect("/home");
+        res.redirect("/");
       }
     } else {
       res.status(400).json({ error: "Authentication failed!22" });

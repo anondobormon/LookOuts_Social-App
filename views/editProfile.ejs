@@ -235,6 +235,7 @@
                               name="about"
                               id="about"
                               class="form-control"
+                              value="<%= user.about%>"
                             />
                           </p>
                         </div>
@@ -246,6 +247,7 @@
                               name="birth"
                               id="birth"
                               class="form-control"
+                              value="<%= user.birth%>"
                             />
                           </p>
                         </div>
@@ -257,6 +259,7 @@
                               name="livesIn"
                               id="livesIn"
                               class="form-control"
+                              value="<%= user.livesIn%>"
                             />
                           </p>
                         </div>
@@ -269,6 +272,7 @@
                               name="occupation"
                               id="occupation"
                               class="form-control"
+                              value="<%= user.occupation%>"
                             />
                           </p>
                         </div>
@@ -281,6 +285,7 @@
                               name="joined"
                               id="joined"
                               class="form-control"
+                              value="<%= user.joined%>"
                             />
                           </p>
                         </div>
@@ -292,6 +297,7 @@
                               name="gender"
                               id="gender"
                               class="form-control"
+                              value="<%= user.gender%>"
                             />
                           </p>
                         </div>
@@ -304,6 +310,7 @@
                               name="status"
                               id="status"
                               class="form-control"
+                              value="<%= user.status%>"
                             />
                           </p>
                         </div>
@@ -315,6 +322,7 @@
                               name="email"
                               id="email"
                               class="form-control"
+                              value="<%= user.email%>"
                             />
                           </p>
                         </div>
@@ -326,6 +334,7 @@
                               name="phone"
                               id="phone"
                               class="form-control"
+                              value="<%= user.phone%>"
                             />
                           </p>
                         </div>
@@ -338,6 +347,7 @@
                               name="religion"
                               id="religion"
                               class="form-control"
+                              value="<%= user.religion%>"
                             />
                           </p>
                         </div>
@@ -349,6 +359,7 @@
                               name="politicalStatus"
                               id="politacalStatus"
                               class="form-control"
+                              value="<%= user.politicalStatus%>"
                             />
                           </p>
                         </div>
@@ -365,6 +376,7 @@
                           value="Save"
                         />
                       </div>
+
                       <hr />
                       <!-- Favorite information -->
                       <div class="favorite-info">
@@ -378,7 +390,10 @@
                                   id="hobbies"
                                   placeholder="Describe your hobbies"
                                   class="p-2 w-100"
-                                ></textarea>
+                                  value=""
+                                >
+<%= user.hobbies%></textarea
+                                >
                               </p>
                             </div>
                           </div>
@@ -391,7 +406,10 @@
                                   id="music"
                                   placeholder="Describe about music"
                                   class="p-2 w-100"
-                                ></textarea>
+                                  value=""
+                                >
+<%= user.music%></textarea
+                                >
                               </p>
                             </div>
                           </div>
@@ -404,7 +422,10 @@
                                   id="tv-show"
                                   placeholder="Describe about tv shows"
                                   class="p-2 w-100"
-                                ></textarea>
+                                  value=""
+                                >
+<%= user.shows%></textarea
+                                >
                               </p>
                             </div>
                           </div>
@@ -417,7 +438,10 @@
                                   id="books"
                                   placeholder="Describe about Books"
                                   class="p-2 w-100"
-                                ></textarea>
+                                  value=""
+                                >
+<%= user.books%></textarea
+                                >
                               </p>
                             </div>
                           </div>

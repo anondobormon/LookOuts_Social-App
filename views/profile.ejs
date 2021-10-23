@@ -54,7 +54,11 @@
                         About
                       </button>
                     </li>
-                    <li><button onclick='togglePage("friends-section")'">Friends</button></li>
+                    <li>
+                      <button onclick='togglePage("friends-section")'>
+                        Friends
+                      </button>
+                    </li>
                   </ul>
                 </div>
                 <div class="profile-pto col-lg-2">
@@ -142,16 +146,9 @@
                         -webkit-line-clamp: 2;
                         -webkit-box-orient: vertical;
                       "
-                    >
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                      Blanditiis eius maiores ipsam cupiditate molestias quod id
-                      explicabo! Nemo recusandae officia vel odio animi velit
-                      voluptate cupiditate id sit quae ab laudantium, optio quia
-                      in ducimus adipisci, nihil itaque magnam. Dicta fuga quas
-                      corporis. Explicabo eveniet sunt odio quam ipsa ut.
-                    </p>
+                    ></p>
                     <div class="timeline-status-img">
-                      <img src="/img/status.jpg" alt="" />
+                      <img src="" alt="" />
                     </div>
                     <div class="status-reaction">
                       <ul>
@@ -213,70 +210,56 @@
                   <div class="personal-info">
                     <div class="info d-flex align-items-center pt-4 px-4">
                       <h3>Personal Info</h3>
-                      
                     </div>
                     <hr />
                     <div class="information pb-4 px-4">
                       <div class="about">
                         <p>About Me:</p>
-                        <p>Information of the about</p>
-                      </div>
-                      <div class="about">
-                        <p>About Me:</p>
-                        <p>Information of the about</p>
+                        <p><%= user.about%></p>
                       </div>
                       <div class="about">
                         <p>Birth Place:</p>
-                        <p>Information of the about</p>
+                        <p><%= user.birth%></p>
                       </div>
                       <div class="about">
                         <p>Lives In:</p>
-                        <p>Information of the about</p>
+                        <p><%= user.livesIn%></p>
                       </div>
 
                       <div class="about">
                         <p>Occupation:</p>
-                        <p>Information of the about</p>
+                        <p><%= user.occupation%></p>
                       </div>
 
                       <div class="about">
                         <p>Joined:</p>
-                        <p>Information of the about</p>
+                        <p><%= user.joined%></p>
                       </div>
                       <div class="about">
                         <p>Gender:</p>
-                        <p>Information of the about</p>
+                        <p><%= user.gender%></p>
                       </div>
 
                       <div class="about">
                         <p>Status:</p>
-                        <p>Information of the about</p>
+                        <p><%= user.status%></p>
                       </div>
                       <div class="about">
                         <p>Email:</p>
-                        <p>Information of the about</p>
+                        <p><%= user.email%></p>
                       </div>
                       <div class="about">
                         <p>Phone:</p>
-                        <p>Information of the about</p>
+                        <p><%= user.phone%></p>
                       </div>
 
                       <div class="about">
                         <p>Religion:</p>
-                        <p>
-                          Lorem ipsum dolor sit, amet consectetur adipisicing
-                          elit. Quisquam, rem error modi optio, explicabo earum
-                          mollitia aliquam fuga, obcaecati nostrum laudantium
-                          sapiente id. Qui ducimus corrupti commodi pariatur
-                          molestiae ipsum? Dignissimos ex vel quo fugiat,
-                          consequuntur praesentium veritatis veniam obcaecati
-                          delectus? Laudantium, labore ad deleniti ullam
-                          perspiciatis quidem aspernatur exercitationem.
-                        </p>
+                        <p>Sanaton</p>
                       </div>
                       <div class="about">
                         <p>Political Incline:</p>
-                        <p>Information of the about</p>
+                        <p><%= user.politicalStatus%></p>
                       </div>
                     </div>
                   </div>
@@ -294,65 +277,25 @@
                         <div class="col-lg-6 col-md-6">
                           <div class="fav-info">
                             <p>Hobbies</p>
-                            <p>
-                              Lorem ipsum, dolor sit amet consectetur
-                              adipisicing elit. Asperiores illo maxime
-                              reiciendis aspernatur aut quisquam, quasi
-                              reprehenderit quia quidem doloremque vitae, natus
-                              at ratione nobis necessitatibus pariatur, eum
-                              repudiandae minima cupiditate alias. Voluptas, at
-                              autem. Velit unde, rem laborum corrupti itaque sed
-                              voluptatem! Assumenda hic neque veniam maiores
-                              accusamus expedita.
-                            </p>
+                            <p><%= user.hobbies%></p>
                           </div>
                         </div>
                         <div class="col-lg-6 col-md-6">
                           <div class="fav-info">
-                            <p>Hobbies</p>
-                            <p>
-                              Lorem ipsum, dolor sit amet consectetur
-                              adipisicing elit. Asperiores illo maxime
-                              reiciendis aspernatur aut quisquam, quasi
-                              reprehenderit quia quidem doloremque vitae, natus
-                              at ratione nobis necessitatibus pariatur, eum
-                              repudiandae minima cupiditate alias. Voluptas, at
-                              autem. Velit unde, rem laborum corrupti itaque sed
-                              voluptatem! Assumenda hic neque veniam maiores
-                              accusamus expedita.
-                            </p>
+                            <p>Movies</p>
+                            <p><%= user.movies%></p>
                           </div>
                         </div>
                         <div class="col-lg-6 col-md-6">
                           <div class="fav-info">
-                            <p>Hobbies</p>
-                            <p>
-                              Lorem ipsum, dolor sit amet consectetur
-                              adipisicing elit. Asperiores illo maxime
-                              reiciendis aspernatur aut quisquam, quasi
-                              reprehenderit quia quidem doloremque vitae, natus
-                              at ratione nobis necessitatibus pariatur, eum
-                              repudiandae minima cupiditate alias. Voluptas, at
-                              autem. Velit unde, rem laborum corrupti itaque sed
-                              voluptatem! Assumenda hic neque veniam maiores
-                              accusamus expedita.
-                            </p>
+                            <p>Tv-Shows</p>
+                            <p><%= user.shows%></p>
                           </div>
                         </div>
                         <div class="col-lg-6 col-md-6">
                           <div class="fav-info">
-                            <p>Hobbies</p>
-                            <p>
-                              Lorem ipsum, dolor sit amet consectetur
-                              adipisicing elit. Asperiores illo maxime
-                              reiciendis aspernatur aut quisquam, quasi
-                              reprehenderit quia quidem doloremque vitae, natus
-                              at ratione nobis necessitatibus pariatur, eum
-                              repudiandae minima cupiditate alias. Voluptas, at
-                              autem. Velit unde, rem laborum corrupti itaque sed
-                              voluptatem! Assumenda hic neque veniam maiores
-                              accusamus expedita.
-                            </p>
+                            <p>Writer's</p>
+                            <p><%= user.writers%></p>
                           </div>
                         </div>
                       </div>
@@ -372,65 +315,25 @@
                         <div class="col-lg-6 col-md-6">
                           <div class="fav-info">
                             <p>Hobbies</p>
-                            <p>
-                              Lorem ipsum, dolor sit amet consectetur
-                              adipisicing elit. Asperiores illo maxime
-                              reiciendis aspernatur aut quisquam, quasi
-                              reprehenderit quia quidem doloremque vitae, natus
-                              at ratione nobis necessitatibus pariatur, eum
-                              repudiandae minima cupiditate alias. Voluptas, at
-                              autem. Velit unde, rem laborum corrupti itaque sed
-                              voluptatem! Assumenda hic neque veniam maiores
-                              accusamus expedita.
-                            </p>
+                            <p></p>
                           </div>
                         </div>
                         <div class="col-lg-6 col-md-6">
                           <div class="fav-info">
                             <p>Hobbies</p>
-                            <p>
-                              Lorem ipsum, dolor sit amet consectetur
-                              adipisicing elit. Asperiores illo maxime
-                              reiciendis aspernatur aut quisquam, quasi
-                              reprehenderit quia quidem doloremque vitae, natus
-                              at ratione nobis necessitatibus pariatur, eum
-                              repudiandae minima cupiditate alias. Voluptas, at
-                              autem. Velit unde, rem laborum corrupti itaque sed
-                              voluptatem! Assumenda hic neque veniam maiores
-                              accusamus expedita.
-                            </p>
+                            <p></p>
                           </div>
                         </div>
                         <div class="col-lg-6 col-md-6">
                           <div class="fav-info">
                             <p>Hobbies</p>
-                            <p>
-                              Lorem ipsum, dolor sit amet consectetur
-                              adipisicing elit. Asperiores illo maxime
-                              reiciendis aspernatur aut quisquam, quasi
-                              reprehenderit quia quidem doloremque vitae, natus
-                              at ratione nobis necessitatibus pariatur, eum
-                              repudiandae minima cupiditate alias. Voluptas, at
-                              autem. Velit unde, rem laborum corrupti itaque sed
-                              voluptatem! Assumenda hic neque veniam maiores
-                              accusamus expedita.
-                            </p>
+                            <p></p>
                           </div>
                         </div>
                         <div class="col-lg-6 col-md-6">
                           <div class="fav-info">
                             <p>Hobbies</p>
-                            <p>
-                              Lorem ipsum, dolor sit amet consectetur
-                              adipisicing elit. Asperiores illo maxime
-                              reiciendis aspernatur aut quisquam, quasi
-                              reprehenderit quia quidem doloremque vitae, natus
-                              at ratione nobis necessitatibus pariatur, eum
-                              repudiandae minima cupiditate alias. Voluptas, at
-                              autem. Velit unde, rem laborum corrupti itaque sed
-                              voluptatem! Assumenda hic neque veniam maiores
-                              accusamus expedita.
-                            </p>
+                            <p></p>
                           </div>
                         </div>
                       </div>
@@ -474,7 +377,7 @@
                     </div>
                   </div>
                 </div>
-  
+
                 <div class="col-md-3">
                   <div class="friend-profile">
                     <div class="friend-cover">
@@ -505,7 +408,7 @@
                     </div>
                   </div>
                 </div>
-  
+
                 <div class="col-md-3">
                   <div class="friend-profile">
                     <div class="friend-cover">
@@ -536,7 +439,7 @@
                     </div>
                   </div>
                 </div>
-  
+
                 <div class="col-md-3">
                   <div class="friend-profile">
                     <div class="friend-cover">
